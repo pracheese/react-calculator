@@ -1,3 +1,17 @@
+:root{
+  --color-gray-transparent: rgba(47, 79, 79,.9);
+  --color-orange-transparent: rgba(255, 165, 0,.9);
+  --shadow:rgba(0,0,0,.5);
+}
+.app{
+  height:100vh;
+  width:100%;
+  background-image: linear-gradient(to bottom right, var(--color-gray-transparent),var(--color-orange-transparent));
+  background-size: cover;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .key {
   border-Radius:50%;

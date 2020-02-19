@@ -86,10 +86,7 @@ class CalculatorBody extends React.Component{
                 }
             );
         }   
-
-
     }
-        
         clear(){
             this.setState({
                 result:'',
@@ -106,6 +103,12 @@ class CalculatorBody extends React.Component{
     }
 }
 
-ReactDOM.render(<CalculatorBody/>, document.getElementById('root'));
+const Calculator = () =>(
+    <div className="app">
+        <CalculatorBody/>
+    </div>
+)
+
+ReactDOM.render(<Calculator/>, document.getElementById('root'));
 
 
