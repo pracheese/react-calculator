@@ -1,7 +1,7 @@
 :root{
   --color-gray-transparent: rgba(47, 79, 79,.9);
   --color-orange-transparent: rgba(255, 165, 0,.9);
-  --shadow:rgba(0,0,0,.5);
+  --shadow:rgb(0,0,0);
 }
 .app{
   height:100vh;
@@ -22,6 +22,40 @@
   margin:2px; 
 }
 
+.keyOp{
+  background-color: orange;
+  color: white;
+}
+
+.keyNum{
+  background-color: DarkSlateGray;
+  color:white;
+}
+.keyOth{
+  background-color: gray;
+  color: black;
+}
+
+.longKey{
+  border-Radius:50px/50px;
+  border:none;
+  width: 65px;
+  height:30px;
+  align-items: center;
+  margin:2px; 
+}
+
+.keyPressed{
+  border-Radius:50%;
+  border:none;
+  width: 30px;
+  height:30px;
+  align-items: center;
+  margin:2px; 
+  background-color: white;
+  color:orange;
+}
+
 .key:focus:not(.focus-visible) {
   outline: none;
 }
@@ -34,6 +68,7 @@
   border-radius: 6px;
   background-color: black;
   padding: 5px;
+  box-shadow: 0 2rem 4rem var(--shadow);
 }
 
 body{

@@ -7,41 +7,52 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
-const CalculatorKey =(props)=>(
-<button className="key" style={{backgroundColor:props.color}} onClick = {props.onButtonClick}>{props.number} </button>
+const CalculatorNumKey =(props)=>(
+    <button className="key keyNum" onClick = {props.onButtonClick}>{props.number} </button>
 );
+
+const CalculatorOthKey =(props)=>(
+    <button className="key keyOth" onClick = {props.onButtonClick}>{props.number} </button>
+);
+
+const CalculatorOpKey =(props)=>(
+    <button className="key keyOp" onClick = {props.onButtonClick}>{props.number} </button>
+);
+
+const CalculatorLongKey =(props)=>(
+    <button className="longKey keyNum" onClick = {props.onButtonClick}>{props.number} </button>
+    );
 
 const CalculatorKeypad =(props) =>(
     <Container>
         <Row>
-            <Col xs="3" style={{padding:"0px"}}><CalculatorKey onButtonClick={props.onButtonClick} number="C" color = "gray"/></Col>
-            <Col xs="3" style={{padding:"0px"}}><CalculatorKey onButtonClick={props.onButtonClick} number="" color = "gray"/></Col>
-            <Col xs="3" style={{padding:"0px"}}><CalculatorKey onButtonClick={props.onButtonClick} number="%" color = "gray"/></Col>
-            <Col xs="3" style={{padding:"0px"}}><CalculatorKey onButtonClick={props.onButtonClick} number="/" color = "orange"/></Col>
+            <Col xs="3" style={{padding:"0px"}}><CalculatorOthKey onButtonClick={props.onButtonClick} number="C" /></Col>
+            <Col xs="3" style={{padding:"0px"}}><CalculatorOthKey onButtonClick={props.onButtonClick} number="CE" /></Col>
+            <Col xs="3" style={{padding:"0px"}}><CalculatorOthKey onButtonClick={props.onButtonClick} number="%" /></Col>
+            <Col xs="3" style={{padding:"0px"}}><CalculatorOpKey onButtonClick={props.onButtonClick} number="/" /></Col>
         </Row>
         <Row>
-            <Col xs="3" style={{padding:"0px"}}><CalculatorKey onButtonClick={props.onButtonClick} number="7" color = "DarkSlateGray"/></Col>
-            <Col xs="3" style={{padding:"0px"}}><CalculatorKey onButtonClick={props.onButtonClick} number="8" color = "DarkSlateGray"/></Col>
-            <Col xs="3" style={{padding:"0px"}}><CalculatorKey onButtonClick={props.onButtonClick} number="9" color = "DarkSlateGray"/></Col>
-            <Col xs="3" style={{padding:"0px"}}><CalculatorKey onButtonClick={props.onButtonClick} number="*" color = "orange"/></Col>
+            <Col xs="3" style={{padding:"0px"}}><CalculatorNumKey onButtonClick={props.onButtonClick} number="7" /></Col>
+            <Col xs="3" style={{padding:"0px"}}><CalculatorNumKey onButtonClick={props.onButtonClick} number="8" /></Col>
+            <Col xs="3" style={{padding:"0px"}}><CalculatorNumKey onButtonClick={props.onButtonClick} number="9" /></Col>
+            <Col xs="3" style={{padding:"0px"}}><CalculatorOpKey onButtonClick={props.onButtonClick} number="X" /></Col>
         </Row>
         <Row>
-            <Col xs="3" style={{padding:"0px"}}><CalculatorKey onButtonClick={props.onButtonClick} number="4" color = "DarkSlateGray"/></Col>
-            <Col xs="3" style={{padding:"0px"}}><CalculatorKey onButtonClick={props.onButtonClick} number="5" color = "DarkSlateGray"/></Col>
-            <Col xs="3" style={{padding:"0px"}}><CalculatorKey onButtonClick={props.onButtonClick} number="6" color = "DarkSlateGray"/></Col>
-            <Col xs="3" style={{padding:"0px"}}><CalculatorKey onButtonClick={props.onButtonClick} number="-" color = "orange"/></Col>
+            <Col xs="3" style={{padding:"0px"}}><CalculatorNumKey onButtonClick={props.onButtonClick} number="4" color = "DarkSlateGray"/></Col>
+            <Col xs="3" style={{padding:"0px"}}><CalculatorNumKey onButtonClick={props.onButtonClick} number="5" color = "DarkSlateGray"/></Col>
+            <Col xs="3" style={{padding:"0px"}}><CalculatorNumKey onButtonClick={props.onButtonClick} number="6" color = "DarkSlateGray"/></Col>
+            <Col xs="3" style={{padding:"0px"}}><CalculatorOpKey onButtonClick={props.onButtonClick} number="-" color = "orange"/></Col>
         </Row>
         <Row>
-            <Col xs="3" style={{padding:"0px"}}><CalculatorKey onButtonClick={props.onButtonClick} number="1" color = "DarkSlateGray"/></Col>
-            <Col xs="3" style={{padding:"0px"}}><CalculatorKey onButtonClick={props.onButtonClick} number="2" color = "DarkSlateGray"/></Col>
-            <Col xs="3" style={{padding:"0px"}}><CalculatorKey onButtonClick={props.onButtonClick} number="3" color = "DarkSlateGray"/></Col>
-            <Col xs="3" style={{padding:"0px"}}><CalculatorKey onButtonClick={props.onButtonClick} number="+" color = "orange"/></Col>
+            <Col xs="3" style={{padding:"0px"}}><CalculatorNumKey onButtonClick={props.onButtonClick} number="1" /></Col>
+            <Col xs="3" style={{padding:"0px"}}><CalculatorNumKey onButtonClick={props.onButtonClick} number="2" /></Col>
+            <Col xs="3" style={{padding:"0px"}}><CalculatorNumKey onButtonClick={props.onButtonClick} number="3" /></Col>
+            <Col xs="3" style={{padding:"0px"}}><CalculatorOpKey onButtonClick={props.onButtonClick} number="+" /></Col>
         </Row>
         <Row>
-            <Col xs="3" style={{padding:"0px"}}><CalculatorKey onButtonClick={props.onButtonClick} number="0" color = "DarkSlateGray"/></Col>
-            <Col xs="3" style={{padding:"0px"}}><CalculatorKey onButtonClick={props.onButtonClick} number="" color = "DarkSlateGray"/></Col>
-            <Col xs="3" style={{padding:"0px"}}><CalculatorKey onButtonClick={props.onButtonClick} number="." color = "DarkSlateGray"/></Col>
-            <Col xs="3" style={{padding:"0px"}}><CalculatorKey onButtonClick={props.onButtonClick} number="=" color = "orange"/></Col>
+            <Col xs="6" style={{padding:"0px"}}><CalculatorLongKey onButtonClick={props.onButtonClick} number="0"/></Col>
+            <Col xs="3" style={{padding:"0px"}}><CalculatorNumKey onButtonClick={props.onButtonClick} number="." /></Col>
+            <Col xs="3" style={{padding:"0px"}}><CalculatorOpKey onButtonClick={props.onButtonClick} number="=" /></Col>
         </Row>
     </Container>
 )
@@ -56,7 +67,8 @@ const CalculatorScreen =(props) =>(
 class CalculatorBody extends React.Component{
     state={
         result:'',
-        equation:''
+        equation:'',
+        currentOperation:Object
     }
 
     onButtonClick = event =>{
@@ -66,19 +78,32 @@ class CalculatorBody extends React.Component{
         if (currentInputButton === 'C')
              return this.clear();
         else if (((currentInputButton >=0) && (currentInputButton <= 9))||(currentInputButton === '.')){
+            if(userInput.length<9){
             userInput +=currentInputButton.trim();
             this.setState({result:userInput});
+            }
         }
-        else if ((currentInputButton === '+')||(currentInputButton === '-')||(currentInputButton === '*')||
-                 (currentInputButton === '/')||(currentInputButton === '%')||(currentInputButton === '^')){
-             userInput =userInput+currentInputButton;
-             this.setState({result:userInput});
+        else if ((currentInputButton === '+')||(currentInputButton === '-')||(currentInputButton === 'X')||
+        (currentInputButton === '/')||(currentInputButton === '%')||(currentInputButton === '^')){
+            this.setState({currentOperation:event.target});
+            event.target.className='keyPressed';
+            if(currentInputButton==='%')
+                userInput=userInput/100;
+            else
+                userInput =userInput+currentInputButton;
+            this.setState({result:userInput});
         }
        
 
         else if (currentInputButton === '=')
-        {            
-            result = eval(userInput);
+        {     
+            let currentOp = this.state.currentOperation;
+            currentOp.className="key keyOp";
+            if(userInput.includes ("X"))  
+                result = 50;
+            else  
+                result = eval(userInput);
+
             this.setState(
                 {
                 equation: userInput,
