@@ -85,13 +85,20 @@ class CalculatorBody extends React.Component{
         }
         else if ((currentInputButton === '+')||(currentInputButton === '-')||(currentInputButton === 'X')||
         (currentInputButton === '/')||(currentInputButton === '%')||(currentInputButton === '^')){
-            this.setState({currentOperation:event.target});
-            event.target.className='keyPressed';
-            if(currentInputButton==='%')
-                userInput=userInput/100;
+            if(userInput.length===0)
+            {
+                // do nothing.
+            }
             else
-                userInput =userInput+currentInputButton;
-            this.setState({result:userInput});
+            {
+                this.setState({currentOperation:event.target});
+                event.target.className='keyPressed';
+                if(currentInputButton==='%')
+                    userInput=userInput/100;
+                else
+                    userInput =userInput+currentInputButton;
+                this.setState({result:userInput});
+            }
         }
        
 
@@ -99,8 +106,12 @@ class CalculatorBody extends React.Component{
         {     
             let currentOp = this.state.currentOperation;
             currentOp.className="key keyOp";
-            if(userInput.includes ("X"))  
-                result = 50;
+            if(userInput.includes ("X")) 
+            { 
+                var num1 = userInput.substring(0,userInput.indexOf('X'));
+                var num2 = userInput.substring(userInput.indexOf('X')+1);
+                result = num1*num2;
+            }
             else  
                 result = eval(userInput);
 
