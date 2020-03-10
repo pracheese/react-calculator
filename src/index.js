@@ -131,7 +131,7 @@ class CalculatorBody extends React.Component{
         }
     render(){
         return(
-            <div className="calcbody">
+            <div className="calcbody box">
                 <CalculatorScreen equation={this.state.equation} result={this.state.result} />
                 <CalculatorKeypad onButtonClick={this.onButtonClick}/>
             </div>
